@@ -1,0 +1,430 @@
+
+body{
+  background:black;
+
+}
+.h3{
+  color: white;
+}
+.card{
+  font-family: 'Roboto Mono', monospace;
+}
+.tops{
+  color: white;
+
+}
+.second{
+  color: yellow;
+}
+.head{
+  text-align: center;
+  font-family: 'Koulen', cursive;
+}
+
+/* งานposition and transform */
+.quote{
+  position: absolute;
+  top:60%;
+  left: 65%;
+  font-family: 'Koulen', cursive;
+}
+.info{
+  color: white;
+}
+.number{
+  color: white;
+}
+p{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+.first{
+  margin: 1em 0 0 0;
+  font-size: 2em;
+  padding: 0;
+
+}
+.second{
+  margin: 0 0 0 0;
+  font-size: 6em;
+  padding-bottom: 0em;
+}
+.bottom{
+  font-size: 1.5em;
+  padding: 0;
+  border: 0;
+  margin: 0 0 0 0;
+}
+.card{
+  position: relative;
+  width: 12.5em;
+  left: 45%;
+  top:150px;
+  bottom: 0%;
+  cursor: pointer;
+
+}
+.font{
+  background: black;
+  border-radius: 5%;
+  border: 1px solid;
+}
+.back{
+  opacity: 0;
+  position: absolute;
+  left: 10%;
+  right: 0;
+  top:100%;
+}
+.picture{
+  display : flex;
+}
+.fontpic{
+  width:1.4em;
+  height:1.4em;
+  border-radius: 50%;
+  border: 5px ;
+}
+.logo{
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  left:80%;
+}
+.stats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.name{
+  margin: .75em 0;
+}
+.profilepic{
+  border-radius: 5%;
+}
+.backgound{
+  background-image: url("https://acegif.com/wp-content/gifs/starfall-gif-29.gif");
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -1;
+  transform: scale(.2,.3);
+  transition: 250ms;
+  border-radius: 5%;
+
+}
+.socials{
+  top:100px;
+  display: flex;
+  justify-content: space-between;
+}
+.social{
+  margin: 2em 0;
+  border: 5px ;
+  text-align: center;
+}
+.social img{
+  width: 1.5em;
+  width: 1.5em;
+}
+.info{
+  font-size: 1rem;
+  text-align: left;
+}
+.card:hover .font{
+    transform: translateY(-30%) scale(.8);
+    transition: 250ms;
+
+}
+.card:hover .backgound{
+  transform: scale(1.7, 1.6) translateY(30%) ;
+}
+.card:hover .stats{
+  opacity: 0;
+}
+.card:hover .name{
+  animation: infoname 250ms forwards;
+}
+.card:hover .back{
+  opacity: 1;
+}
+.card:hover .logo{
+  animation: logomove 250ms forwards;
+}
+.my-info{
+  margin: 2em 0;
+  columns: 2;
+  column-rule: 1px solid white;
+}
+.number{
+  font-size: 1.125rem;
+  text-align: center;
+
+}
+.btn{
+  cursor: pointer;
+  border: 0;
+  background: white;
+  border-radius: 100vw;
+  font-weight: bold;
+  padding: .5em 1.5em;
+}
+.social .img{
+  width:1.4em;
+  height:1.4em;
+}
+@keyframes logomove {
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    transform: rotateX(20px);
+    opacity: 0;
+  }
+  100{
+    transform: rotateX(20px);
+    opacity: 1;
+  }
+
+}
+@keyframes infoname {
+  0%{
+    text-align: left;
+    opacity: 1;
+  }
+  20%{
+    text-align: left;
+    opacity: 1;
+  }
+  50%{
+    text-align: center;
+    opacity: 1;
+    transform: scale(2);
+
+  }
+  100%{
+    text-align: center;
+    opacity: 1;
+
+  }
+}
+.firsts{
+  height: 1080px;
+}
+.line {
+        width: 400px;
+        height: 2px;
+        background: yellow;
+        position: absolute;
+        top: 69%;
+        left: 76%;
+        transform: translate(-50%, -50%);
+        overflow-x: hidden;
+        }
+
+        .line::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            animation: animate 5s linear infinite;
+
+        }
+
+        @keyframes animate {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            0% {
+                left: 0;
+            }
+        }
+
+.final__layers {
+  position: relative;
+  min-height: 1000px;
+  max-width: 800px;
+}
+
+.final__layers img {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  transition: all ease 1600ms;
+  transform-style: preserve-3d;
+}
+
+.final__layers:hover img {
+
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(180px);
+}
+
+.final__layers img.mid {
+  width: 1200px;
+  left: 20px;
+}
+
+.final__layers img.top {
+  width: 500px;
+  height: 500px;
+  left: 100px;
+  top: 100px;
+}
+
+
+
+.final__layers:hover img.mid {
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(240px);
+}
+
+.final__layers:hover img.top {
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(280px);
+}
+
+
+.final-result{
+  max-width: 800px;
+  margin-top: 100px;
+  transform: translateY(600px) translateX(500px);
+}
+.text{
+  position: absolute;
+  top:1450px;
+  font-size: 5em;
+  font-family: 'Koulen', cursive;
+}
+.last{
+  position: absolute;
+  top:1000px;
+  left: 750px;
+  font-size: 4em;
+  font-family: 'Koulen', cursive;
+}
+.midtext{
+  margin-left: 150px;
+  padding: 0;
+  border: 0;
+}
+.toptext{
+  margin: -106px;
+  margin-left: 20px;
+}
+.bottomtext{
+  margin: -106px;
+  margin-left: 20px;
+}
+.count{
+  font-family: 'Koulen', cursive;
+  position: absolute;
+  font-size: 5rem;
+  color: Yellow;
+  left: 300px;
+  top: 350px;
+}
+.num{
+  font-family: 'Koulen', cursive;
+  position: absolute;
+  font-size: 5rem;
+  color: Yellow;
+  left: 170px;
+  top: 1700px;
+}
+.title{
+  margin: 20px;
+}
+.contents{
+  left: 400px;
+  margin: 50px;
+  width: 1000px;
+  background: black;
+  font-family: 'Koulen', cursive;
+  color: black;
+  position: absolute;
+  top:2600px;
+  border-radius: 5px;
+}
+.columns {
+  margin: 20px;
+  font-family: 'Koulen', cursive;
+  color: black;
+  columns: 25ch 3;
+  gap: 2em;
+}
+.button1{
+ display:inline-block;
+ padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.2s;
+}
+
+.butt{
+  position: absolute;
+  top: 2500px;
+  left:800px;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: Yellow;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '💡';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  top:-7px;
+  right: -40px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
